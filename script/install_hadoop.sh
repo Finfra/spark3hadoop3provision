@@ -11,8 +11,8 @@ bash install_java.sh
 x=$(cat /etc/ssh/sshd_config|grep "^PermitRootLogin yes")
 [[ ${#x} -eq 0 ]]&& echo "PermitRootLogin yes" >> /etc/ssh/sshd_config && systemctl restart sshd.service
 
-ssh-keygen -f ~/.ssh/id_rsa -N ''
-cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+x=$(ls ~/.ssh/id_rsa)
+[[ ${#x}  -eq 0 ]]&& ssh-keygen -f ~/.ssh/id_rsa -N '';cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 
 # Download and Extract
 wget https://dlcdn.apache.org/hadoop/common/hadoop-$hadoopVersion/hadoop-$hadoopVersion.tar.gz -P /tmp
