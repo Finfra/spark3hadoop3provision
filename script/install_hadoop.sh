@@ -120,8 +120,12 @@ echo '<?xml version="1.0" encoding="UTF-8"?>
 echo 'localhost'>$HADOOP_HOME/etc/hadoop/workers
 
 hadoop namenode -format
-start-dfs.sh
-#start-yarn.sh
 # mapred --daemon start historyserver
-jps
+
 fi
+
+# Start service
+start-dfs.sh
+start-yarn.sh
+
+jps

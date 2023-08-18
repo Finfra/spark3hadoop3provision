@@ -1,4 +1,5 @@
 #!/bin/bash
 
 . install_hadoop.sh
-. install_
+. install_spark.sh
+. install_jupyter.sh
