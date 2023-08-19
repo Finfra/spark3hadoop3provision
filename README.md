@@ -19,8 +19,8 @@ cd spark3hadoop3provision/script
 ```
 
 # AMI 
-* ID : ami-045b4f0a573d645d1
-* Name : finfra_spark3hadoop3
+* ID : ami-0649a417eaba9ac54
+* Name : finfra_spark3hadoop3_v3
 * Script for first login
 ```
 sudo -i
