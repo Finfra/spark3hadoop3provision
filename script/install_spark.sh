@@ -17,6 +17,7 @@ x=$(cat /etc/bashrc|grep SPARK_HOME)
 export SPARK_HOME=$SPARK_HOME
 export PYSPARK_PYTHON=python3
 export PATH=\$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
+export SPARK_LOCAL_IP=127.0.0.1
 ">>/etc/bashrc && . /etc/bashrc
 
 # Start service
