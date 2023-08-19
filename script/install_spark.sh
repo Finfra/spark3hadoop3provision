@@ -9,7 +9,7 @@ tar xvzf /tmp/spark-$sparkVersion-bin-hadoop3.tgz
 
 mv spark-$sparkVersion-bin-hadoop3 $SPARK_HOME
 echo "export SPARK_WORKER_INSTANCES=1" > $SPARK_HOME/conf/spark-env.sh
-
+echo "export SPARK_MASTER_HOST=namenode" >> $SPARK_HOME/conf/spark-env.sh
 
 # 환경변수 설정
 x=$(cat /etc/bashrc|grep SPARK_HOME)
